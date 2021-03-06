@@ -1,5 +1,6 @@
 const Company = require('../models').Company;
 
+
 module.exports = {
     create(req, res) {
         return Company.create({
@@ -7,7 +8,6 @@ module.exports = {
         })
         .then(company => res.status(201).send(company))
         .catch(error => {
-            console.log(error,'kkkkkkkkkkkkkkkkkkk');
             // res.status(400).send(error)
         });
     }
